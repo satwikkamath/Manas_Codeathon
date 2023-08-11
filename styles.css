@@ -1,0 +1,15 @@
+@font-face {
+    font-family: Gagalin;
+    src: url(Gagalin-Regular.ttf) format('truetype'),
+         url(._Gagalin-Regular.ttf) format('opentype');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* Gagalin, */
+h1 {
+    font-family: Gagalin;
+}
