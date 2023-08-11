@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Quest</title>
+    <link rel="stylesheet" href="home.css">
+    <script>
+        function showThankYouMessage() {
+            const subscribeForm = document.querySelector(".subscribe-form");
+            const responseElement = document.getElementById("subscribeResponse");
+            
+            subscribeForm.style.display = "none";
+            responseElement.innerHTML = "Thank you for subscribing!";
+            responseElement.style.display = "block";
+            alert("Thank you for subscribing!");
+        }
+    </script>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <a href="">CONTACT US</a>
+            <a href="">LEADERBOARD</a>
+            <a href="">LOGIN</a>
+            <a href="">SIGN-UP</a>
+        </nav>
+    </header>
+    <div class="intro">
+        <img src="image_files/mario.png" alt="Mario">
+        <h1>The Memory Quest</h1>
+        <h3>Unlock Your Memory Master!!</h3>
+        <div class="play">
+            <a href="#" class="play-now-button">Play Now</a>
+        </div>
+    </div>
+
+    <div class="c2">
+        <div class="princess">
+            <img src="image_files/princess.png" alt="Princess" width="450px">
+        </div>
+        <div class="info">
+            <p>
+                Step into the captivating world of <em>'The Memory Quest,'</em> where your memory skills become your greatest asset. Prepare for an exhilarating adventure that demands your focus and cognitive finesse. As the numbers flicker across the screen, ranging from intricate patterns to varying lengths, your task is to imprint them in your mind before they vanish within seconds. Feel the adrenaline as you face the challenge head-on, relying on your memory to decipher the sequence of digits amidst a dynamic and fast-paced environment.
+                <br><br>
+                But that's not all – <em>'The Memory Quest'</em> adds an intriguing twist by presenting you with multiple choices after the numbers disappear. With your heart racing, you must choose the correct sequence from the options provided, making split-second decisions that will determine your success. The stakes are high, and every choice matters, as even the smallest oversight could impact your score.
+                <br><br>
+                As you progress through the game, the challenges become more intricate, pushing the boundaries of your memory capacity. Each level unveils new patterns, longer sequences, and increasingly complex choices, ensuring that you're constantly engaged and challenged. Immerse yourself in this mesmerizing journey where cognitive agility and mental dexterity are your key allies.
+                <br><br>
+                <em>'The Memory Quest'</em> is more than just a game – it's a platform for cognitive growth and development. With its blend of excitement, challenge, and cognitive exercise, it offers a unique opportunity to enhance your memory skills while enjoying an immersive gaming experience. Get ready to unlock the full potential of your memory and embark on a quest that promises not only entertainment but also cognitive empowerment.
+            </p>
+        </div>
+    </div>
+    <div class="c3">
+        <div class="rules">
+            <h2>INSTRUCTIONS</h2>
+            <div>1. REMEMBER THE NUMBER ON YOUR SCREEN</div>
+            <div>2. RECALL AND VERIFY</div>
+            <div>3. SELECT THE CORRECT OPTIONS</div>
+        </div>
+        <div class="pole">
+            <img src="image_files/pole.png" alt="Mario on Pole" width="350px">
+        </div>
+    </div>
+    <h3 style="font-size: 90px; text-align: center;"> TESTIMONIALS </h3>
+    <div class="c4">
+        
+        <div class="dino">
+            <img src="image_files/DINO.png" alt="dino" width="350px">
+        </div>
+        <DIV class="TEST1">
+            "Wow, 'The Memory Quest' totally blew me away! I mean, the way it gets your heart racing <BR>
+            while you're trying to remember those disappearing digits is unreal. And then you've got to <BR>
+            pick the right sequence? It's like a mental workout and an adventure all rolled into one. I can<BR>
+             honestly say, I've never had this much fun while boosting my memory skills!"<BR>
+        </DIV>
+        <DIV class="TEST2">
+            "I'm seriously hooked on 'The Memory Quest' – it's like my daily dose of brain fuel. <BR>
+            You won't believe the rush when you beat the clock and match the right sequence. <BR>
+            It's like a game that's tailor-made to keep you on your toes. <BR>
+            I can't recommend it enough for anyone who's up for a challenge <BR>
+            that's as entertaining as it is mind-boosting!"  <BR>
+        </DIV>
+    </div>
+    <div class="about">
+        <h3>ABOUT THE DEVELOPERS</h3>
+        <P>we're gamers turned creators, dedicated to crafting unforgettable experiences. <BR>
+            Our mission is to transport players to magical worlds through immersive storytelling and captivating gameplay.<BR>
+                 Join us on this thrilling journey of wonder and excitement!</P>
+    </div>
+    <div class="newsletter">
+        <p>SUBSCRIBE TO OUR NEWSLETTER
+        Stay updated with the latest news, game updates, and special offers!</p>
+        <form class="subscribe-form" onsubmit="showThankYouMessage(); return false;">
+            <input type="email" placeholder="Enter your email" required>
+            <button type="submit">Subscribe</button>
+            <div class="response" id="subscribeResponse"></div>
+        </form>
+    </div>
+</body>
+</html>
