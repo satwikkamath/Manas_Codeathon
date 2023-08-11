@@ -1,0 +1,94 @@
+/* background peach color: #F45050
+navy blue border: #1F1347 (also font)
+button yellow color: #FDE962
+main heading: #7843E6 */
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#btn-signup {
+    padding: 10px 15px;
+    background-color: #FDE962;
+    color: #1F1347;
+    border: none;
+    cursor: pointer;
+}
+.overlay {
+    width: 100%;
+    position: fixed;
+    top: 0%;
+    background: rgba(0, 0, 0, 0.5);
+    height: 100vh;
+    z-index: -1;
+    opacity: 0;
+    transition: 1s;
+}
+.show-overlay {
+    opacity: 1;
+    z-index: 1;
+}
+/* #4ad66d */
+.form-content {
+    width: 400px;
+    padding: 30px 20px;
+    background-color: #4c956c;
+    color: #1F1347;
+    position: absolute;
+    left: 50%;
+    top: -50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 0px 20px white;
+    transition: 1.5s;
+    z-index: 2;
+    border-radius: 20px;
+}
+.show-form-content {
+    top: 50%;;
+}
+.form-content input{
+    width: 100%;
+    height: 45px;
+    border-radius: 20px;
+    border: none;
+    padding: 10px;
+}
+.form-content button{
+    padding: 10px 15px;
+    color: #1F1347;
+    border: none;
+    font-weight: bolder;
+    width: 100%;
+    height: 45px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+.form-content span{
+    position: absolute;
+    right: 0px;
+    width: 30px;
+    height: 30px;
+    color: #1F1347;
+    line-height: 30px;
+    height: 30px;
+    background-color: #FDE962;
+    text-align: center;
+    top: 0px;
+    cursor: pointer;
+    border-radius: 0px 20px 0px 0px;
+}
+.form-content h1{
+    text-align: center;
+    padding-bottom: 10px;
+    color: #1F1347;
+}
+.form-ele{
+    padding: 10px 0px;
+}
+.reset-ele {
+    background-color: #fad2e1;
+}
+.submit-ele {
+    background-color: #FDE962;
+}

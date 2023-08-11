@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="signup.css">
+    <title>Sign Up</title>
+</head>
+<body>
+    <!-- onclick="showModal()" -->
+    <button id="btn-signup" >SIGN UP</button>
+    <div class="overlay" onclick="closeModal()"></div>
+    <!-- <section class="form-box" id="form-box"> -->
+    <div class="form-content">
+        <span>&times;</span>
+        <h1>SIGN UP</h1>
+        <form action="" class="sign-up-form">
+            <div class="form-ele">
+                <label for="name">NAME</label>
+                <input type="text" placeholder="Enter your name">
+            </div>
+            <div class="form-ele">
+                <label for="email">EMAIL ID</label>
+                <input type="email" placeholder="Enter your Email-ID">
+            </div>
+            <div class="form-ele">
+                <label for="password">PASSWORD</label>
+                <input type="password" placeholder="One number, special character, uppercase, lowercase">
+            </div>
+            <div class="form-ele">
+                <label for="password">CONFIRM PASSWORD</label>
+                <input type="password" placeholder="write it over">
+            </div>
+            <div class="form-ele">
+                <button type="reset" class="reset-ele">RESET</button>
+            </div>
+            <div class="form-ele">
+                <button type="submit" class="submit-ele" >SUBMIT</button>
+            </div>
+        </form>
+    </div>
+    <!-- </section> -->
+    <script src="signup.js"></script>
+</body>
+</html>
