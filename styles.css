@@ -1,0 +1,13 @@
+@font-face {
+    src: url('Gagalin-Regular.otf') ;
+    font-family: Gagalin-Regular;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-family: Gagalin-Regular;
+}
