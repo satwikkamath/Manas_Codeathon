@@ -7,6 +7,7 @@ main heading: #7843E6 */
     margin: 0px;
     padding: 0px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
 }
 #btn-signup {
     padding: 10px 15px;
@@ -52,7 +53,10 @@ main heading: #7843E6 */
     height: 45px;
     border-radius: 20px;
     border: none;
-    padding: 20px;
+    padding-left: 10px;
+}
+.form-content label {
+    padding-left: 10px;
 }
 .form-content button{
     padding: 10px 15px;
