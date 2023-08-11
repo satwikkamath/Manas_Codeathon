@@ -1,7 +1,6 @@
 @font-face {
-    font-family: Gagalin;
-    src: url(Gagalin-Regular.ttf) format('truetype'),
-         url(._Gagalin-Regular.ttf) format('opentype');
+    src: url('Gagalin-Regular.otf') ;
+    font-family: Gagalin-Regular;
 }
 
 *{
@@ -9,7 +8,6 @@
     padding: 0;
 }
 
-/* Gagalin, */
 h1 {
-    font-family: Gagalin;
+    font-family: Gagalin-Regular;
 }
