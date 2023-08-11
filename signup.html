@@ -7,29 +7,32 @@
     <title>Sign Up</title>
 </head>
 <body>
+    <!-- main buttons -->
     <!-- onclick="showModal()" -->
     <button id="btn-signup" >SIGN UP</button>
+    <button id="btn-login">LOGIN</button>
+
+    <!-- modal sign up form -->
     <div class="overlay" onclick="closeModal()"></div>
-    <!-- <section class="form-box" id="form-box"> -->
     <div class="form-content">
-        <span>&times;</span>
+        <span id="span-signup">&times;</span>
         <h1>SIGN UP</h1>
-        <form action="" class="sign-up-form">
+        <form action="" class="form">
             <div class="form-ele">
                 <label for="name">NAME</label>
-                <input type="text" placeholder="Enter your name">
+                <input type="text" placeholder="What's your name?">
             </div>
             <div class="form-ele">
-                <label for="email">EMAIL ID</label>
-                <input type="email" placeholder="Enter your Email-ID">
+                <label for="age">AGE</label>
+                <input type="number" placeholder="How old are you?">
             </div>
             <div class="form-ele">
                 <label for="password">PASSWORD</label>
-                <input type="password" placeholder="One number, special character, uppercase, lowercase">
+                <input type="password" placeholder="number+special character+letters">
             </div>
             <div class="form-ele">
                 <label for="password">CONFIRM PASSWORD</label>
-                <input type="password" placeholder="write it over">
+                <input type="password" placeholder="Write it over.">
             </div>
             <div class="form-ele">
                 <button type="reset" class="reset-ele">RESET</button>
@@ -39,7 +42,32 @@
             </div>
         </form>
     </div>
-    <!-- </section> -->
+
+    <!-- modal login form -->
+    <div class="overlay2" onclick="closeModal2()"></div>
+    <div class="form-content2">
+        <span id="span-login">&times;</span>
+        <h1>LOGIN</h1>
+        <form action="" class="form">
+            <div class="form-ele">
+                <label for="name">NAME</label>
+                <input type="text" placeholder="What's your name?">
+            </div>
+            <div class="form-ele">
+                <label for="password">PASSWORD</label>
+                <input type="password" placeholder="You remember your password. right?">
+            </div>
+            <div class="form-ele">
+                <a href="">Forgot Password?</a>
+            </div>
+            <div class="form-ele">
+                <button type="reset" class="reset-ele">RESET</button>
+            </div>
+            <div class="form-ele">
+                <button type="submit" class="submit-ele" >SUBMIT</button>
+            </div>
+        </form>
+    </div>
     <script src="signup.js"></script>
 </body>
 </html>
