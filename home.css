@@ -1,10 +1,12 @@
-*{
-    margin: 0;
-    padding: 0;
-}
 @font-face {
     src: url('Gagalin-Regular.otf');
     font-family: Gagalin-Regular;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    color: #1F1347;
 }
 
 body {
@@ -15,12 +17,11 @@ body {
 
 .navbar {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     background-color: black;
     padding: 30px ;
     gap: 20px; 
 }
-
 
 .navbar a {
     font-size: 25px;
@@ -29,42 +30,56 @@ body {
     transition: font-size 0.3s, color 0.3s;
 }
 
+.navbar h2 {
+    color: white;
+}
+
 .navbar a:hover {
-    font-size: 24px;
+    font-size: 27px;
     color: yellow;
 }
 
+#intro-img {
+    background-image: url('image_files/super-mario-scene.jpg');
+    padding: 20px;
+    /* background-size: 100% 100%;
+    background-repeat: no-repeat; 
+    object-fit: cover; */
+    position: relative;
+    width: 100%;
+}
 
 .intro img {
     float: right;
-    width: 400px;
+    width: 25%;
+    padding: 20px;
 }
 
 .intro h1 {
-    font-size: 150px;
-    text-decoration: underline;
+    font-size: 3.5rem;
     text-align: center;
+    padding: 10px 0px;
 }
 
 .intro h3 {
     font-size: 32px;
-    color: white;
+    color: #FDE962;
     text-align: center;
-    animation: subtitleAnimation 3s ease-in-out infinite alternate;
+    animation: subtitleAnimation 1s ease-in-out infinite alternate;
 }
 
 @keyframes subtitleAnimation {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
+    0% {
         transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(10px);
     }
 }
 
-.intro .play {
+.intro-img .play {
     text-align: center;
-    margin-top: 50px; 
+    padding: 30px auto;
 }
 
 .intro .play a {
@@ -90,8 +105,6 @@ body {
     transform: scale(0.95);
     box-shadow: none;
 }
-
-
 
 .c2 {
     display: flex;
@@ -209,6 +222,15 @@ body {
     color: #00a800; 
 }
 
-
-
+/* media queries */
+@media screen and (max-width: 600px) {
+    #intro-img {
+        position: relative ;
+        width: 180%;
+        left: -40%;
+    }
+    .intro h1 {
+        font-size: 2rem;
+    }
+}
 
