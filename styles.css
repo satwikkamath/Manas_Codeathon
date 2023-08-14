@@ -6,8 +6,84 @@
 *{
     margin: 0;
     padding: 0;
+    font-family: Gagalin-Regular;
 }
 
-h1 {
-    font-family: Gagalin-Regular;
+body {
+    background-color: #F45050;
+    color: #1F1347;
+
+}
+
+.navbar{
+    background-color: #1F1347;
+}
+
+.navbar a{
+    color: white;
+    text-decoration: none;
+}
+
+.navbar a:hover{
+    color: #FDE962;
+}
+
+.main-logo {
+    margin-right: 8px;
+}
+
+.btn-signup {
+    background-color: #FDE962;
+    border-radius: 20px;
+    color: #1F1347;
+}
+
+.btn-signup:hover{
+    background-color: #c9b848;
+}
+
+.intro {
+    background-image: url("image_files/super-mario-scene.jpg") ;
+    background-repeat: repeat-x;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 372px;
+}
+
+.intro h1 {
+    text-shadow: #fff 0px 0px 30px;
+}
+
+.intro h3 {
+    color:#FDE962;
+    text-shadow: #1F1347 0px 0px 5px;
+}
+
+.about-imgs {
+    width: auto;
+    height: 50vh;
+}
+
+.about {
+    display: flex;
+    justify-content: center;
+}
+
+.big-para {
+    margin: 40px;
+    text-align: center;
+    background-color: #FDE962;
+    padding: 70px;
+    border-radius: 20px;
+    font-size:larger;
+    color: #1F1347;
+}
+
+@media screen and (max-width: 992px){
+    .about-imgs {
+        width: auto;
+        height: 20vh;
+    }
 }
