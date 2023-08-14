@@ -61,6 +61,30 @@ body {
     text-shadow: #1F1347 0px 0px 5px;
 }
 
+#play-now-btn {
+    padding: 10px 30px;
+    background-color: #FDE962;
+    border: #1F1347 solid 4px;
+    border-radius: 35px;
+    font-size: x-large;
+    animation: playBtnAnimation 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes playBtnAnimation {
+    0% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1.0);
+    }
+}
+
+#play-now-btn:hover {
+    background-color:#1F1347;
+    border: #FDE962 solid 4px;
+    color: #FDE962;
+}
+
 .about-imgs {
     width: auto;
     height: 50vh;
@@ -73,7 +97,7 @@ body {
 
 .big-para {
     margin: 40px;
-    text-align: center;
+    text-align: justify;
     background-color: #FDE962;
     padding: 70px;
     border-radius: 20px;
@@ -82,8 +106,29 @@ body {
 }
 
 @media screen and (max-width: 992px){
+    .about {
+        display: flex;
+        flex-direction: column;
+    }
+    .about-flex-ele {
+        display: block;
+        margin: 0px auto;
+    }
+    .about-imgs {
+        width: 200px;
+        height: auto;
+    }
+    .big-para {
+        padding: 5px;
+        margin: 5px;
+        background-color: #FDE962;
+        text-align: justify;
+    }
+}
+
+@media screen and (max-width: 1400px) {
     .about-imgs {
         width: auto;
-        height: 20vh;
+        height: 30vh;
     }
 }
