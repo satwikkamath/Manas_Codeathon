@@ -7,6 +7,8 @@
     margin: 0;
     padding: 0;
     font-family: Gagalin-Regular;
+    /* add padding and margin inside width */
+    box-sizing: border-box;
 }
 
 body {
@@ -32,14 +34,111 @@ body {
     margin-right: 8px;
 }
 
-.btn-signup {
+#btn-signup, #btn-login{
+    padding: 7px 20px;
+    margin: 0px 5px;
     background-color: #FDE962;
+    color: #1F1347;
+    border: none;
     border-radius: 20px;
+    cursor: pointer;
+}
+#btn-signup:hover, #btn-login:hover{
+    background-color: #ccba42;
+}
+.overlay, .overlay2 {
+    width: 100%;
+    position: fixed;
+    top: 0%;
+    background: rgba(0, 0, 0, 0.75);
+    height: 100vh;
+    /* first keeping it behind the scene */
+    z-index: -1;
+    opacity: 0;
+    transition: 1s;
+}
+.show-overlay {
+    /* override the overlay properties with these attributes */
+    opacity: 1;
+    z-index: 1;
+}
+.form-content,  .form-content2{
+    width: 400px;
+    padding: 30px 20px;
+    background-color: #4c956c;
+    color: #1F1347;
+    position: absolute;
+    /* brings it almost to south east position */
+    left: 50%;
+    /* keeps it away rom user view */
+    top: -50%;
+    /* contradicts above 2 attributes and brings it to exact centre */
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 0px 20px white;
+    transition: 1.5s;
+    z-index: 2;
+    border-radius: 20px;
+}
+.show-form-content {
+    /* override form content properties with these attributes */
+    top: 50%;
+}
+.form-content input, .form-content2 input{
+    width: 100%;
+    height: 45px;
+    border-radius: 20px;
+    border: none;
+    padding-left: 10px;
+}
+.form-content label, .form-content2 label{
+    /* avoids cramming at left side */
+    padding-left: 10px;
+}
+.form-content button, .form-content2 button{
+    padding: 10px 30px;
+    color: #1F1347;
+    border: none;
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    border-radius: 40px;
+}
+.form-content span, .form-content2 span{
+    position: absolute;
+    right: 0px;
+    width: 30px;
+    height: 30px;
+    color: #1F1347;
+    line-height: 30px;
+    height: 30px;
+    background-color: #FDE962;
+    text-align: center;
+    top: 0px;
+    cursor: pointer;
+    border-radius: 0px 20px 0px 0px;
+}
+.form-content span:hover, .form-content2 span:hover{
+    background-color: #FF0000;
+}
+.form-content h1, .form-content2 h1{
+    text-align: center;
+    padding-bottom: 10px;
     color: #1F1347;
 }
-
-.btn-signup:hover{
-    background-color: #c9b848;
+.form-ele{
+    padding: 10px 0px;
+}
+.reset-ele {
+    background-color: #fad2e1;
+}
+.reset-ele:hover {
+    background-color: #ce90a7;
+}
+.submit-ele {
+    background-color: #FDE962;
+}
+.submit-ele:hover {
+    background-color: #ccba42;
 }
 
 .intro {
@@ -106,6 +205,9 @@ body {
 }
 
 @media screen and (max-width: 992px){
+    #btn-signup, #btn-login {
+        margin: 5px 0px;
+    }
     .about {
         display: flex;
         flex-direction: column;
