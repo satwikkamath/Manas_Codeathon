@@ -204,6 +204,30 @@ body {
     color: #1F1347;
 }
 
+.instructions {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 40px auto;
+}
+
+.instruct-text {
+    display: flex;
+    flex-direction: column;
+    padding: 50px auto;
+}
+
+.instruct-text-ele {
+    padding: 15px 25px;
+    background-color: #FDE962;
+    border-radius: 20px;
+}
+
+.instruct-img {
+    height: 50px;
+    width: auto;
+}
+
 @media screen and (max-width: 992px){
     #btn-signup, #btn-login {
         margin: 5px 0px;
