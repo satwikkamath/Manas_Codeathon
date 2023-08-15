@@ -214,7 +214,11 @@ body {
 .instruct-text {
     display: flex;
     flex-direction: column;
-    padding: 50px auto;
+    margin: 170px;
+}
+
+.instruct-text h2{
+    font-size: x-large;
 }
 
 .instruct-text-ele {
@@ -245,10 +249,20 @@ body {
         height: auto;
     }
     .big-para {
-        padding: 5px;
-        margin: 5px;
+        padding: 5px 12px;
+        margin: 5px 10px;
         background-color: #FDE962;
         text-align: justify;
+    }
+}
+
+@media screen and (max-width: 1070px){
+    .instruct-text {
+        margin: 50px 10px;
+    }
+    .instruct-text-ele {
+        padding: 5px 12px;
+        font-size: larger;
     }
 }
 
