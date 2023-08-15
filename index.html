@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
@@ -11,9 +12,10 @@
 </head>
 
 <body>
+    <!-- Navigation bar -->
     <nav class="navbar navbar-expand-lg ">
         <div class="container-fluid">
-            <img src="brain-logo.ico" alt="Logo" class="main-logo">
+            <img src="image_files/brain-logo.ico" alt="Logo" class="main-logo">
             <a class="navbar-brand" href="#">The Memory Quest</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -30,6 +32,7 @@
             </div>
         </div>
     </nav>
+
     <!-- modal sign up form -->
     <div class="overlay" onclick="closeModal()"></div>
     <div class="form-content">
@@ -60,6 +63,7 @@
             </div>
         </form>
     </div>
+
     <!-- modal login form -->
     <div class="overlay2" onclick="closeModal2()"></div>
     <div class="form-content2">
@@ -85,11 +89,15 @@
             </div>
         </form>
     </div>
+
+    <!-- Introduction text -->
     <div class="intro img-fluid">
         <h1 class="display-1">THE MEMORY QUEST</h1>
         <h3>Unlock Your Memory Master!!</h3>
         <button id="play-now-btn">PLAY NOW!</button>
     </div>
+
+    <!-- About us -->
     <div class="about">
         <img src="image_files/princess.png" class="float-start about-imgs about-flex-ele" alt="princess">
         <p class="about-flex-ele big-para">
@@ -104,6 +112,7 @@
         <img src="image_files/mario2-removebg-preview.png" class="float-end about-imgs about-flex-ele" alt="mario">
     </div>
 
+    <!-- Instructions -->
     <div class="instructions">
         <span class="instruct-text">
             <h2>Instructions</h2>
@@ -116,10 +125,11 @@
         </div>
     </div>
 
+    <!-- Javascript source files -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
-        crossorigin="anonymous"></script>
-    <script src="signup.js"></script>
+        crossorigin="anonymous"></script> <!--bootstrap-->
+    <script src="signup.js"></script> <!-- signup and login form-->
 </body>
 
 </html>
