@@ -61,7 +61,7 @@ body {
     width: 100%;
     position: fixed;
     top: 0%;
-    background: rgba(0, 0, 0, 0.85);
+    background: #000000d9;
     height: 100vh;
     /* first keeping it behind the scene */
     z-index: -1;
@@ -288,9 +288,59 @@ footer {
     padding: 50px;
     color: white;
     font-family: 'Rajdhani', sans-serif;
+    text-align: center;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+}
+.social-icons a {
+    text-decoration: none;
+    padding: 10px;
+    background-color: #ffebcd;
+    margin: 10px;
+    border-radius: 50%;
+}
+
+.social-icons a i {
+    font-size: 2em;
+    color: #184e77;
+    opacity: 0.9;
+}
+
+.social-icons a:hover {
+    background-color: #184e77;
+    transition: 0.7s;
+}
+
+.social-icons a:hover i{
+    color: #ffebcd;
+    transition: 0.7s;
+}
+
+.footer-nav {
+    margin: 30px 0px;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-nav p a {
+    color: white;
+    text-decoration: none;
+    margin: 0px 10px;
+    opacity: 0.7;
+    transition: 0.7s;
 }
 
 /* media queries for responsiveness */
+@media screen and (max-width: 768px){
+    .footer-nav  {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
 @media screen and (max-width: 992px){
     #btn-signup, #btn-login {
         margin: 5px 0px;
