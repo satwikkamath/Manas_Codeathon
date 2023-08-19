@@ -1,3 +1,7 @@
+/* dark blue #184e77 */
+/* start green #52b69a */
+/* end yellow #d9ed92 */
+
 /* font file setup */
 @font-face {
     src: url('Gagalin-Regular.otf') ;
@@ -8,19 +12,20 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: Gagalin-Regular;
     /* add padding and margin inside width */
     box-sizing: border-box;
 }
 
 body {
-    background-color: #F45050;
-    color: #1F1347;
+    background-color: #ffebcd;
+    color: #fff;
 }
 
 /* navbar */
 .navbar{
-    background-color: #1F1347;
+    background-color: #184e77;
+    box-shadow: 0px 0px 15px black;
+    font-family: 'Rajdhani', sans-serif;
 }
 
 .navbar a{
@@ -29,33 +34,34 @@ body {
 }
 
 .navbar a:hover{
-    color: #FDE962;
+    color: #d69c45;
 }
 
 .main-logo {
     margin-right: 8px;
 }
 
-/* modal forms - sign up, login */
 #btn-signup, #btn-login{
     padding: 7px 20px;
     margin: 0px 5px;
-    background-color: #FDE962;
-    color: #1F1347;
-    border: none;
+    background-color: #EEB868;
+    color: #000;
+    border: 2px solid black;
     border-radius: 20px;
     cursor: pointer;
+    font-weight: bolder;
 }
 
 #btn-signup:hover, #btn-login:hover{
-    background-color: #ccba42;
+    background-color: #d69c45;
 }
 
+/* modal forms - sign up, login */
 .overlay, .overlay2 {
     width: 100%;
     position: fixed;
     top: 0%;
-    background: rgba(0, 0, 0, 0.75);
+    background: rgba(0, 0, 0, 0.85);
     height: 100vh;
     /* first keeping it behind the scene */
     z-index: -1;
@@ -72,8 +78,8 @@ body {
 .form-content,  .form-content2{
     width: 400px;
     padding: 30px 20px;
-    background-color: #4c956c;
-    color: #1F1347;
+    background-color: #184e77;
+    color: black;
     position: absolute;
     /* brings it almost to south east position */
     left: 50%;
@@ -103,29 +109,30 @@ body {
 .form-content label, .form-content2 label{
     /* avoids cramming at left side */
     padding-left: 10px;
+    color: white;
 }
 
 .form-content button, .form-content2 button{
-    padding: 10px 30px;
-    color: #1F1347;
-    border: none;
+    color: black;
+    border: 2px solid black;
     width: 100%;
-    height: auto;
+    height: 45px;
     cursor: pointer;
     border-radius: 40px;
+    font-weight: bolder;
 }
 
 .form-content span, .form-content2 span{
     position: absolute;
+    top: 0px;
     right: 0px;
     width: 30px;
     height: 30px;
-    color: #1F1347;
+    color: black;
     line-height: 30px;
     height: 30px;
-    background-color: #FDE962;
+    background-color: blanchedalmond;
     text-align: center;
-    top: 0px;
     cursor: pointer;
     border-radius: 0px 20px 0px 0px;
 }
@@ -137,11 +144,15 @@ body {
 .form-content h1, .form-content2 h1{
     text-align: center;
     padding-bottom: 10px;
-    color: #1F1347;
+    color: white;
+    text-shadow: 0px 0px 8px black;
+    font-family: 'Orbitron', sans-serif;
+    font-size:xx-large;
 }
 
 .form-ele{
     padding: 10px 0px;
+    font-family: 'Rajdhani', sans-serif;
 }
 
 .reset-ele {
@@ -153,40 +164,46 @@ body {
 }
 
 .submit-ele {
-    background-color: #FDE962;
+    background-color: #EEB868;
 }
 
 .submit-ele:hover {
-    background-color: #ccba42;
+    background-color: #d69c45;
 }
 
 /* introduction section */
 .intro {
-    background-image: url("image_files/super-mario-scene.jpg") ;
+    background-image: url("image_files/super-mario-scene.jpg");
     background-repeat: repeat-x;
+    font-family: 'Orbitron', sans-serif;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 372px;
+    height: 330px;
 }
 
 .intro h1 {
-    text-shadow: #fff 0px 0px 30px;
+    color: white;
+    text-shadow: 0px 0px 10px black;
+    backdrop-filter: blur(10px);
+    text-align: center;
 }
 
 .intro h3 {
-    color:#FDE962;
-    text-shadow: #1F1347 0px 0px 5px;
+    color:white;
+    text-shadow: 0px 0px 8px black;
+    backdrop-filter: blur(10px);
 }
 
 #play-now-btn {
     padding: 10px 30px;
-    background-color: #FDE962;
-    border: #1F1347 solid 4px;
+    background-color: #EEB868;
+    border: 2px solid black;
     border-radius: 35px;
     font-size: x-large;
     animation: playBtnAnimation 0.5s ease-in-out infinite alternate;
+    color: #000;
 }
 
 @keyframes playBtnAnimation {
@@ -199,9 +216,8 @@ body {
 }
 
 #play-now-btn:hover {
-    background-color:#1F1347;
-    border: #FDE962 solid 4px;
-    color: #FDE962;
+    background-color:#d69c45;
+    border: 2px solid black;
 }
 
 /* about us section */
@@ -213,16 +229,18 @@ body {
 .about {
     display: flex;
     justify-content: center;
+    font-family: 'Rajdhani', sans-serif;
 }
 
 .big-para {
     margin: 40px;
-    text-align: justify;
-    background-color: #FDE962;
+    text-align: center;
+    background-color: #184e77;
     padding: 70px;
     border-radius: 20px;
     font-size:larger;
-    color: #1F1347;
+    color: #fff;
+    box-shadow: 0px 0px 15px black;
 }
 
 /* instructions section */
@@ -230,28 +248,46 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    margin: 40px auto;
+    margin: 80px auto;
 }
 
 .instruct-text {
     display: flex;
     flex-direction: column;
-    margin: 170px;
+    border: 3px solid #184e77;
+    padding: 40px 40px;
+    border-radius: 30px;
+    box-shadow: 0px 0px  10px black;
 }
 
 .instruct-text h2{
     font-size: x-large;
+    text-shadow: 0px 0px 10px white;
+    font-family: 'Orbitron', sans-serif;
+    color: black;
+    margin: 30px 0px;
 }
 
 .instruct-text-ele {
     padding: 15px 25px;
-    background-color: #FDE962;
+    background-color: #184e77;
     border-radius: 20px;
+    box-shadow: 0px 0px 10px black;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: large;
 }
 
 .instruct-img {
-    height: 50px;
+    height: 400px;
     width: auto;
+}
+
+/* footer */
+footer {
+    background-color: #184e77;
+    padding: 50px;
+    color: white;
+    font-family: 'Rajdhani', sans-serif;
 }
 
 /* media queries for responsiveness */
@@ -274,8 +310,17 @@ body {
     .big-para {
         padding: 5px 12px;
         margin: 5px 10px;
-        background-color: #FDE962;
-        text-align: justify;
+        text-align: center;
+    }
+    .instructions {
+        display: flex;
+        flex-direction: column;
+        margin: 5px 10px;
+    }
+    .instruct-img {
+        width: 175px;
+        height: auto;
+        margin: 0px auto;
     }
 }
 
