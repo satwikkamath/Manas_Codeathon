@@ -2,12 +2,6 @@
 /* start green #52b69a */
 /* end yellow #d9ed92 */
 
-/* font file setup */
-@font-face {
-    src: url('Gagalin-Regular.otf') ;
-    font-family: Gagalin-Regular;
-}
-
 /* initialization */
 *{
     margin: 0;
@@ -45,8 +39,8 @@ body {
     padding: 7px 20px;
     margin: 0px 5px;
     background-color: #EEB868;
-    color: #000;
-    border: 2px solid black;
+    color: #184e77;
+    border: 2px solid #184e77;
     border-radius: 20px;
     cursor: pointer;
     font-weight: bolder;
@@ -131,7 +125,7 @@ body {
     color: black;
     line-height: 30px;
     height: 30px;
-    background-color: blanchedalmond;
+    background-color: #ffebcd;
     text-align: center;
     cursor: pointer;
     border-radius: 0px 20px 0px 0px;
@@ -173,7 +167,7 @@ body {
 
 /* introduction section */
 .intro {
-    background-image: url("image_files/super-mario-scene.jpg");
+    background-image: url("image_files/super-mario-scene-4.jpg");
     background-repeat: repeat-x;
     font-family: 'Orbitron', sans-serif;
     display: flex;
@@ -184,26 +178,27 @@ body {
 }
 
 .intro h1 {
-    color: white;
-    text-shadow: 0px 0px 10px black;
+    color: #184e77;
+    text-shadow: 0px 0px 5px #fff;
     backdrop-filter: blur(10px);
     text-align: center;
 }
 
 .intro h3 {
-    color:white;
-    text-shadow: 0px 0px 8px black;
+    color: #184e77;
+    text-shadow: 0px 0px 8px #ffffff;
     backdrop-filter: blur(10px);
+    text-align: center;
 }
 
 #play-now-btn {
     padding: 10px 30px;
     background-color: #EEB868;
-    border: 2px solid black;
+    border: 2px solid #184e77;
     border-radius: 35px;
     font-size: x-large;
     animation: playBtnAnimation 0.5s ease-in-out infinite alternate;
-    color: #000;
+    color: #184e77;
 }
 
 @keyframes playBtnAnimation {
@@ -258,13 +253,14 @@ body {
     padding: 40px 40px;
     border-radius: 30px;
     box-shadow: 0px 0px  10px black;
+    background-color: #faddb1;
 }
 
 .instruct-text h2{
     font-size: x-large;
     text-shadow: 0px 0px 10px white;
     font-family: 'Orbitron', sans-serif;
-    color: black;
+    color: #184e77;
     margin: 30px 0px;
 }
 
@@ -334,6 +330,12 @@ footer {
 }
 
 /* media queries for responsiveness */
+@media screen and (max-width: 325px){
+    .instruct-text h2{
+        font-size: large;
+    }
+}
+
 @media screen and (max-width: 768px){
     .footer-nav  {
         display: flex;
