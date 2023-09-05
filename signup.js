@@ -30,3 +30,5 @@ var btnLogin = document.querySelector("#btn-login");
 btnLogin.addEventListener("click", showModal2);
 var closeBtn = document.querySelector('#span-login');
 closeBtn.addEventListener('click', closeModal2);
+
+// motivational quotes
