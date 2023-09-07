@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Orbitron font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@900&display=swap" rel="stylesheet">
+    <!-- Rajdhani font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600&display=swap" rel="stylesheet">
+    <!--bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/motivationalQuotes.css">
+    <title>Quotes</title>
+</head>
+
+<body>
+    <div class="everything">
+        <div class="all-items">
+            <img src="../image_files/DINO.png" alt="happy dinosaur">
+            <div class="text">
+                <h1 class="display-6">Today's Motivation!</h1>
+                <button onclick="random_from_array()">Generate</button>
+                <p id="quote"></p>
+            </div>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#184e77" fill-opacity="0.95"
+                d="M0,32L48,69.3C96,107,192,181,288,176C384,171,480,85,576,90.7C672,96,768,192,864,234.7C960,277,1056,267,1152,240C1248,213,1344,171,1392,149.3L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+            </path>
+        </svg>
+    </div>
+
+    <script>
+        let quotes = ["'Without goals, and plans to reach them, you are like a ship that has set sail with no destination.' — Fitzhugh Dodson",
+            "'I have a motto on my bedroom wall: 'Obstacles are what you see when you take your eye off the goal.' Giving up is not my style. I just want to do something that's worthwhile.' — Chris Burke",
+            "People with goals succeed because they know where they're going. — Earl Nightingale",
+            "'A year from now you may wish you had started today.' ― Karen Lamb",
+            "'If you have built castles in the air, your work need not be lost; that is where they should be. Now put the foundations under them.' ― Henry David Thoreau",
+            "'When defeat comes, accept it as a signal that your plans are not sound, rebuild those plans, and set sail once more toward your coveted goal.' ― Napoleon Hill",
+            "'You must do the things you think you cannot do.' ― Eleanor Roosevelt",
+            "'Goals are dreams with deadlines.' ― Diana Scharf",
+            "'The rung of a ladder was never meant to rest upon, but only to hold a man's foot long enough to enable him to put the other somewhat higher.' ― Thomas Henry Huxley",
+            "'I don't care how much power, brilliance or energy you have, if you don't harness it and focus it on a specific target, and hold it there, you're never going to accomplish as much as your ability warrants.' ― Zig Ziglar",
+            "'Life is not easy for any of us. But what of that? We must have perseverance and above all confidence in ourselves. We must believe that we are gifted for something and that this thing must be attained.' ― Marie Curie",
+            "'One of the secrets of life is to make stepping stones out of stumbling blocks.' ― Jack Penn",
+            "'Our goals can only be reached through a vehicle of a plan, in which we must fervently believe, and upon which we must vigorously act. There is no other route to success.' ― Stephen A. Brennan",
+            "'I can't change the direction of the wind, but I can adjust my sails to always reach my destination.' ― Jimmy Dean",
+            "'People often say I have so much energy, that I never stop; but that's what it takes to accomplish your goals.' ― Curtis Jackson",
+            "'If a goal is worth having, it's worth blocking out the time in your day-to-day life necessary to achieve it.' ― Jill Koenig",
+            "'You can, you should, and if you're brave enough to start, you will.' ― Stephen King",
+            "'You don't have to be a fantastic hero to do certain things — to compete. You can be just an ordinary chap, sufficiently motivated to reach challenging goals.' ― Edmund Hillary",
+            "'If you're bored with life — you don't get up every morning with a burning desire to do things — you don't have enough goals.' ― Lou Holtz",
+            "'Do not wait; the time will never be 'just right.' Start where you stand, and work with whatever tools you may have at your command, and better tools will be found as you go along.' ― Napoleon Hill",
+            "'You can't hit a home run unless you step up to the plate. You can't catch a fish unless you put your line in the water. You can't reach your goals if you don't try.' ― Kathy Seligman",
+            "'Obstacles can't stop you. Problems can't stop you. Most of all, other people can't stop you. Only you can stop you.' — Jeffrey Gitomer",
+            "'Winners are losers who got up and gave it one more try.' — Dennis DeYoung",
+            "'Circumstances may cause interruptions and delays, but never lose sight of your goal. Prepare yourself in every way you can by increasing your knowledge and adding to your experience, so that you can make the most of opportunity when it occurs.' — Mario Andretti",
+            "'You can conquer almost any fear if you will make up your mind to do so. For remember, fear doesn't exist anywhere except in the mind.' — Dale Carnegie",
+            "'By recording your dreams and goals on paper, you set in motion the process of becoming the person you most want to be. Put your future in good hands — your own.' — Mark Victor Hansen",
+            "'Whatever you can do, or dream you can, begin it. Boldness has genius, magic, and power in it.' — Johann Wolfgang von Goethe",
+            "'Many people fail in life, not for lack of ability or brains or even courage but simply because they have never organized their energies around a goal.' — Elbert Hubbard",
+            "'A dream becomes a goal when action is taken toward its achievement.' — Bo Bennett",
+            "'If you want to be happy, set a goal that commands your thoughts, liberates your energy and inspires your hopes.' — Andrew Carnegie",
+            "'Focused, hard work is the real key to success. Keep your eyes on the goal, and just keep taking the next step towards completing it. If you aren't sure which way to do something, do it both ways and see which works better.' — John Carmack",
+            "'Know what you want to do, hold the thought firmly, and do every day what should be done, and every sunset will see you that much nearer to your goal.' — Elbert Hubbard",
+            "'The question isn't who's going to let me; it's who is going to stop me.' — Ayn Rand",
+            "'Any unforeseen challenges that crop up are only there to test your resolve on your way to ultimate success in reaching your goal.' — Byron Pulsifer",
+            "'Success is the progressive realization of a worthy goal or ideal.' — Earl Nightingale",
+            "'One part at a time, one day at a time, we can accomplish any goal we set for ourselves.' — Karen Casey",
+            "'You can set a direct course for your future by defining your goals, or, you can take the opposite position and just let the future haphazardly unfold by itself.' — Catherine Pulsifer",
+            "'We do not develop anything with one giant step. No matter who you are, or what you do, each one of us had had to take a lot of individual steps to accomplish a task, a job, a career, or even a hobby.' — Catherine Pulsifer",
+            "'It doesn't matter where you are coming from. All that matters is where you are going.' — Brian Tracy",
+            "'Do not let what you cannot do interfere with what you can do.' — John Wooden",
+            "'Begin with the end in mind.' — Stephen Covey",
+            "'Discipline is the bridge between goals and accomplishment.' — Jim Rohn",
+            "'Don't let the opinions of the average man sway you. Dream, and he thinks you're crazy. Succeed, and he thinks you're lucky. Acquire wealth, and he thinks you're greedy. Pay no attention. He simply doesn't understand.' — Robert G. Allen",
+            "'The most common way people give up their power is by thinking they don't have any.' — Alice Walker",
+            "'You miss 100% of the shots you don't take.' — Wayne Gretzky",
+            "'Your complaints, your drama, your victim mentality, your whining, your blaming, and all of your excuses have never gotten you even a single step closer to your goals or dreams. Let go of your nonsense. Let go of the delusion that you deserve better and go earn it!' — Steve Maraboli",
+            "'If you don't make the time to work on creating the life that you want, you're going to spend a lot of time dealing with a life you don't want.' — Kevin Ngo",
+            "'When you know what you want and you want it bad enough, you'll find a way to get it.' — Jim Rohn",
+            "'Decide whether or not the goal is worth the risks involved. If it is, stop worrying.' — Amelia Earhart",
+            "'Nothing is impossible, the word itself says 'I'm possible'!' — Audrey Hepburn",
+            "'Believe in yourself! Have faith in your abilities! Without a humble but reasonable confidence in your own powers you cannot be successful or happy.' — Norman Vincent Peale",
+            "'Where there is a will, there is a way. If there is a chance in a million that you can do something, anything, to keep what you want from ending, do it. Pry the door open or, if need be, wedge your foot in that door and keep it open.' — Pauline Kael",
+            "'If you can dream it, you can do it.' — Walt Disney",
+            "'You need lofty goals. Then cement it with a great work ethic.' — Jerry West",
+            "'The future belongs to those who believe in the beauty of their dreams.' — Eleanor Roosevelt",
+            "'Press forward. Do not stop, do not linger in your journey, but strive for the mark set before you.' — George Whitefield",
+            "'Aim for the moon. If you miss, you may hit a star.' — W. Clement Stone",
+            "'There will be obstacles. There will be doubters. There will be mistakes. But with hard work, there are no limits.' — Michael Phelps",
+            "'Don't watch the clock; do what it does. Keep going.' — Sam Levenson",
+            "'If there is no struggle, there is no progress.' — Frederick Douglass",
+            "'One way to keep momentum going is to have constantly greater goals.' — Michael Korda",
+            "'We aim above the mark to hit the mark.' — Ralph Waldo Emerson",
+            "'Change your life today. Don't gamble on the future, act now, without delay.' — Simone de Beauvoir",
+            "'Start where you are. Use what you have. Do what you can.' — Arthur Ashe",
+            "'You just can't beat the person who never gives up.' — Babe Ruth",
+            "'Why should you continue going after your dreams? Because seeing the look on the faces of the people who said you couldn't… will be priceless.' — Kevin Ngo",
+            "'Never give up, for that is just the place and time that the tide will turn.' — Harriet Beecher Stowe",
+            "'The trouble with not having a goal is that you can spend your life running up and down the field and never score.' — Bill Copeland",
+            "'You should set goals beyond your reach so you always have something to live for.' — Ted Turner",
+            "'When it is obvious that the goals cannot be reached, don't adjust the goals, adjust the action steps.' — Confucius",
+            "'Stay focused, go after your dreams and keep moving toward your goals.' — LL Cool J",
+            "'Without some goals and some efforts to reach it, no man can live.' — John Dewey",
+            "'Set realistic goals, keep re-evaluating, and be consistent.' — Venus Williams",
+            "'You need to have unbound enthusiasm for what you're building. Energy is contagious, so your team and everyone you interact with feels it.' — Tyler Haney",
+            "'I am constantly re-evaluating my goals and trying to strike items from my to-do list that aren't critical.' — Aisha Tyler"];
+
+        quotes_ele = document.getElementById('quote');
+
+        function random(mn, mx) {
+            return Math.random() * (mx - mn) + mn;
+        }
+
+        function random_from_array() {
+            quotes_ele.textContent = String(quotes[(Math.floor(random(0, 74)))]);
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,420 @@
+/* dark blue #184e77 */
+/* start green #52b69a */
+/* end yellow #d9ed92 */
+
+/* initialization */
+*{
+    margin: 0;
+    padding: 0;
+    /* add padding and margin inside width */
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ffebcd;
+    color: #fff;
+}
+
+/* navbar */
+.navbar{
+    background-color: #184e77;
+    box-shadow: 0px 0px 15px black;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+.navbar a{
+    color: white;
+    text-decoration: none;
+}
+
+.navbar a:hover{
+    color: #d69c45;
+}
+
+.main-logo {
+    margin-right: 8px;
+}
+
+#btn-signup, #btn-login{
+    padding: 7px 20px;
+    margin: 0px 5px;
+    background-color: #EEB868;
+    color: #184e77;
+    border: 2px solid #184e77;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bolder;
+}
+
+#btn-signup:hover, #btn-login:hover{
+    background-color: #d69c45;
+}
+
+/* modal forms - sign up, login */
+.overlay, .overlay2 {
+    width: 100%;
+    position: fixed;
+    top: 0%;
+    background: #000000d9;
+    height: 100vh;
+    /* first keeping it behind the scene */
+    z-index: -1;
+    opacity: 0;
+    transition: 1s;
+}
+
+.show-overlay {
+    /* override the overlay properties with these attributes */
+    opacity: 1;
+    z-index: 1;
+}
+
+.form-content,  .form-content2{
+    width: 400px;
+    padding: 30px 20px;
+    background-color: #184e77;
+    color: black;
+    position: absolute;
+    /* brings it almost to south east position */
+    left: 50%;
+    /* keeps it away rom user view */
+    top: -50%;
+    /* contradicts above 2 attributes and brings it to exact centre */
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 0px 20px white;
+    transition: 1.5s;
+    z-index: 2;
+    border-radius: 20px;
+}
+
+.show-form-content {
+    /* override form content properties with these attributes */
+    top: 50%;
+}
+
+.form-content input, .form-content2 input{
+    width: 100%;
+    height: 45px;
+    border-radius: 20px;
+    border: none;
+    padding-left: 10px;
+}
+
+.form-content label, .form-content2 label{
+    /* avoids cramming at left side */
+    padding-left: 10px;
+    color: white;
+}
+
+.form-content button, .form-content2 button{
+    color: #184e77;
+    width: 100%;
+    height: 45px;
+    cursor: pointer;
+    border-radius: 40px;
+    font-weight: bolder;
+}
+
+.form-content span, .form-content2 span{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 30px;
+    height: 30px;
+    color: black;
+    line-height: 30px;
+    height: 30px;
+    background-color: #ffebcd;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 0px 20px 0px 0px;
+}
+
+.form-content span:hover, .form-content2 span:hover{
+    background-color: #FF0000;
+}
+
+.form-content h1, .form-content2 h1{
+    text-align: center;
+    padding-bottom: 10px;
+    color: white;
+    text-shadow: 0px 0px 8px black;
+    font-family: 'Orbitron', sans-serif;
+    font-size:xx-large;
+}
+
+.form-ele{
+    padding: 10px 0px;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+.side-links {
+    color: #EEB868;
+}
+
+.reset-ele {
+    background-color: #fad2e1;
+}
+
+.reset-ele:hover {
+    background-color: #ce90a7;
+}
+
+.submit-ele {
+    background-color: #EEB868;
+}
+
+.submit-ele:hover {
+    background-color: #d69c45;
+}
+
+/* introduction section */
+.intro {
+    background-image: url("../image_files/super-mario-scene-4.jpg");
+    background-repeat: repeat-x;
+    font-family: 'Orbitron', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 330px;
+}
+
+.intro h1 {
+    color: #184e77;
+    text-shadow: 0px 0px 5px #fff;
+    backdrop-filter: blur(10px);
+    text-align: center;
+}
+
+.intro h3 {
+    color: #184e77;
+    text-shadow: 0px 0px 8px #ffffff;
+    backdrop-filter: blur(10px);
+    text-align: center;
+}
+
+#play-now-btn {
+    padding: 10px 30px;
+    background-color: #EEB868;
+    border: 2px solid #184e77;
+    border-radius: 35px;
+    font-size: x-large;
+    animation: playBtnAnimation 0.5s ease-in-out infinite alternate;
+    color: #184e77;
+}
+
+@keyframes playBtnAnimation {
+    0% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1.0);
+    }
+}
+
+#play-now-btn:hover {
+    background-color:#d69c45;
+}
+
+/* about us section */
+.about-imgs {
+    width: auto;
+    height: 50vh;
+}
+
+.about {
+    display: flex;
+    justify-content: center;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+.big-para {
+    margin: 40px;
+    text-align: center;
+    background-color: #184e77;
+    padding: 70px;
+    border-radius: 20px;
+    font-size:larger;
+    color: #fff;
+    box-shadow: 0px 0px 15px black;
+}
+
+/* instructions section */
+.instructions {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 80px auto;
+}
+
+.instruct-text {
+    display: flex;
+    flex-direction: column;
+    border: 3px solid #184e77;
+    padding: 40px 40px;
+    border-radius: 30px;
+    box-shadow: 0px 0px  10px black;
+    background-color: #faddb1;
+}
+
+.instruct-text h2{
+    font-size: x-large;
+    text-shadow: 0px 0px 10px white;
+    font-family: 'Orbitron', sans-serif;
+    color: #184e77;
+    margin: 30px 0px;
+}
+
+.instruct-text-ele {
+    padding: 15px 25px;
+    background-color: #184e77;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px black;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: large;
+}
+
+.instruct-img {
+    height: 400px;
+    width: auto;
+}
+
+/* accordion */
+.faq h2{
+    font-family: 'Orbitron', sans-serif;
+    color: #184e77;
+    text-shadow: 0px 0px 3px #fff;
+}
+
+.accordion{
+    width: 75%;
+    margin: auto ;
+    color: #184e77;
+    background-color: #faddb1;
+    font-family: 'Rajdhani', sans-serif;
+    border: 2px solid #184e77;
+    border-radius: 30px;
+}
+
+.accordion-button, .accordion-body {
+    color: #184e77;
+}
+
+/* footer */
+footer {
+    background-color: #184e77;
+    padding: 50px;
+    color: white;
+    font-family: 'Rajdhani', sans-serif;
+    text-align: center;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+}
+.social-icons a {
+    text-decoration: none;
+    padding: 10px;
+    background-color: #ffebcd;
+    margin: 10px;
+    border-radius: 50%;
+}
+
+.social-icons a i {
+    font-size: 2em;
+    color: #184e77;
+    opacity: 0.9;
+}
+
+.social-icons a:hover {
+    background-color: #184e77;
+    transition: 0.7s;
+}
+
+.social-icons a:hover i{
+    color: #ffebcd;
+    transition: 0.7s;
+}
+
+.footer-nav {
+    margin: 30px 0px;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-nav p a {
+    color: white;
+    text-decoration: none;
+    margin: 0px 10px;
+    opacity: 0.7;
+    transition: 0.7s;
+}
+
+/* media queries for responsiveness */
+@media screen and (max-width: 325px){
+    .instruct-text h2{
+        font-size: large;
+    }
+    .social-icons a i {
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .footer-nav  {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 992px){
+    #btn-signup, #btn-login {
+        margin: 5px 0px;
+    }
+    .about {
+        display: flex;
+        flex-direction: column;
+    }
+    .about-flex-ele {
+        display: block;
+        margin: 0px auto;
+    }
+    .about-imgs {
+        width: 200px;
+        height: auto;
+    }
+    .big-para {
+        padding: 5px 12px;
+        margin: 5px 10px;
+        text-align: center;
+    }
+    .instructions {
+        display: flex;
+        flex-direction: column;
+        margin: 5px 10px;
+    }
+    .instruct-img {
+        width: 175px;
+        height: auto;
+        margin: 0px auto;
+    }
+}
+
+@media screen and (max-width: 1070px){
+    .instruct-text {
+        margin: 50px 10px;
+    }
+    .instruct-text-ele {
+        padding: 5px 12px;
+        font-size: larger;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .about-imgs {
+        width: auto;
+        height: 30vh;
+    }
+}
