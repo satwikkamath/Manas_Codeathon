@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Orbitron font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@900&display=swap" rel="stylesheet">
+    <!-- Rajdhani font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="playground.css">
+    <link rel="stylesheet" href="mystyle.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <title>Playground</title>
+</head>
+
+<body>
+    <div class="head">
+        <h1>THE MEMORY QUEST</h1>
+    </div>
+    <div class="playground">
+        <div class="game-info">
+            <div class="row text-center">
+                <div class="col-6 font-black d-flex flex-column align-items-start">
+                    <h2>
+                        <img src="avatars/doraemon_avatar.png" alt="your avatar" srcset="" class="avatar">
+                        <%= userName %>
+                    </h2>
+                    <h2>
+                        Score: <%= score %>
+                    </h2>
+
+                </div>
+
+                <div class="col-6 d-flex flex-column align-items-end">
+                    <h2 class="font-black">
+                        Level <%= level %>
+                    </h2>
+                    <h2>
+                        <form action="/exit" method="post">
+                            <input type="text" name="userName" value="<%= userName %>" id="" hidden>
+                            <button class="resetBtn" type="submit">Exit</button>
+                        </form>
+                    </h2>
+                    <h2>
+                        <form action="/reset" method="post">
+                            <input type="text" name="userName" value="<%= userName %>" id="" hidden>
+                            <input type="text" name="level" id="" value="<%= level %>" hidden>
+                            <button class="resetBtn" type="submit">Restart</button>
+                        </form>
+                    </h2>
+                </div>
+            </div>
+        </div>
+        <div class="game-area">
+            <div class="numbers gy-5 col-12 ">
+                <div class="row justify-content-center row-cols-auto align-items-center">
+                    <% numbers.forEach(element=> { %>
+                        <div class="col digit">
+                            <%=element%>
+                        </div>
+                        <% }) %>
+                </div>
+            </div>
+
+            <div class="options col-12 dispNone">
+                <div class="row text-center justify-content-center align-items-center">
+                    <% options.forEach(element=> { %>
+                        <div class="col-lg-6 col-md-6 col-sm-12 mt-sm-2 my-md-3 my-lg-3">
+                            <form action="/<%= formPost %>" method="post">
+                                <input type="text" name="level" value="<%=level%>" id="" hidden>
+                                <input type="text" name="ans" value="<%= element.value %>" id="" hidden>
+                                <input type="text" name="userName" value="<%= userName %>" id="" hidden>
+                                <input type="text" name="score" value="<%= score %>" id="" hidden>
+                                <button class="submitBtn" type="submit">
+                                    <%= element.option %>
+                                </button>
+                            </form>
+                        </div>
+                        <% }); %>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <script src="myscript.js"></script>
+</body>
+
+</html>

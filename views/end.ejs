@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Orbitron font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@900&display=swap" rel="stylesheet">
+    <!-- Rajdhani font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="playground.css">
+    <title>Score</title>
+</head>
+
+<body>
+    <div class="top">
+        <h2>CONGRATULATIONS!!</h2>
+    </div>
+    <div class="score-text">
+        <img src="image_files/trophy.png" alt="trophy">
+        <div class="score-text-box">
+            <p>Score: <%= score %>
+            </p> <br>
+            <p>Performance: <%= performance %>
+            </p> <br>
+            <form action="/exit" method="post">
+                <input type="text" name="userName" id="" value="<%= userName %>"hidden>
+                <button type="submit" class="go-to-main-page-btn">Go To Home Page</button>
+            </form>
+        </div>
+        <img src="image_files/trophy.png" alt="trophy">
+    </div>
+</body>
+
+</html>

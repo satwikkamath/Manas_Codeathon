@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Orbitron font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@900&display=swap" rel="stylesheet">
+    <!-- Rajdhani font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="leaderboard.css">
+    <title>Leaderboard</title>
+</head>
+
+<body>
+    <div class="top">
+        <h2>LEADERBOARD</h2>
+    </div>
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">NAME</th>
+                    <th scope="col">AGE</th>
+                    <th scope="col">LEVEL</th>
+                    <th scope="col">SCORE</th>
+                </tr>
+            </thead>
+            <tbody class="table-group-divider">
+                    <% let i=1 %>
+                    <% users.forEach(element => { %>
+                        
+                        <tr>
+                            <th scope="row"><%= i %></th>
+                            <% i++ %>
+                            <td><%= element.name %></td>
+                            <td><%= element.age %></td>
+                            <td>1</td>
+                            <% if(element.level1){ %>
+                            <td><%= element.level1 %></td>
+                            <% }else{ %>
+                                <td>Not attempted</td>
+                                <% } %>
+                        </tr>
+                        <% }); %>
+               
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>

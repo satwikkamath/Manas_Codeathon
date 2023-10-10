@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- social media icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Orbitron font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@900&display=swap" rel="stylesheet">
+    <!-- Rajdhani font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600&display=swap" rel="stylesheet">
+    <!--bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <title>Memory Quest</title>
+</head>
+
+<body>
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-lg sticky-top" id="mynavbar">
+        <div class="container-fluid ">
+            <img src="image_files/brain-logo.png" alt="Logo" class="main-logo">
+            <a class="navbar-brand">The Memory Quest</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link" aria-current="page" href="#about">Home</a>
+                    <a class="nav-link" href="/leaderboard">Leaderboard</a>
+                    <form action="/personal" method="post">
+                        <input type="text" name="userName" value="<%= userName %>" hidden>
+                        <button type="submit" class="nav-link" style="color: white;">Personal Best</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- Introduction text -->
+    <div class="intro img-fluid blur">
+        <h1 class="display-1">THE MEMORY QUEST</h1>
+        <h3>Unlock Your Memory Master!!</h3>
+        <h3 style="color:#EEB868; text-shadow:0px 0px 3px black;">Player Name: <%= userName %>
+        </h3>
+    </div>
+
+
+    <!-- About us -->
+    <div class="about" id="about">
+        <img src="image_files/princess.png" class="float-start about-imgs about-flex-ele" alt="princess">
+        <div class="levels">
+            <form action="/level" method="post">
+                <input type="text" name="userName" id="" value="<%= userName %>" hidden>
+                <input type="text" name="level" value="1" id="" hidden>
+                <button class="level">
+                    LEVEL 1 <br>(Easy)
+                </button>
+            </form>
+            <form action="/level" method="post">
+                <input type="text" name="userName" id="" value="<%= userName %>" hidden>
+                <input type="text" name="level" value="2" id="" hidden>
+                <button class="level">
+                    LEVEL 2 <br>(Medium)
+                </button>
+            </form>
+            <form action="/level" method="post">
+                <input type="text" name="userName" id="" value="<%= userName %>" hidden>
+                <input type="text" name="level" value="3" id="" hidden>
+                <button class="level">
+                    LEVEL 3 <br>(Hard)
+                </button>
+            </form>
+
+        </div>
+        <img src="image_files/mario2-removebg-preview.png" class="float-end about-imgs about-flex-ele" alt="mario">
+    </div>
+
+    <!-- Instructions -->
+
+
+    <!-- footer -->
+    <footer id="footer">
+        <div class="social-icons">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#"><i class="fa fa-envelope"></i></a>
+        </div>
+        <div class="footer-nav">
+            <p><a href="#">Home</a></p>
+            <p><a href="#">News</a></p>
+            <p><a href="#">About developers</a></p>
+        </div>
+        <div class="footer-bottom">
+            <p>Copyright &copy; 2023</p>
+            <p>Designed with passion</p>
+        </div>
+    </footer>
+
+    <!-- Javascript source files -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script> <!--bootstrap-->
+    <script src="signup.js"></script> <!-- signup and login form-->
+</body>
+
+</html>

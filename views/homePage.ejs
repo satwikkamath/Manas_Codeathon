@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- social media icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Orbitron font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@900&display=swap" rel="stylesheet">
+    <!-- Rajdhani font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600&display=swap" rel="stylesheet">
+    <!--bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <title>The Memory Quest</title>
+</head>
+
+<body>
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-lg sticky-top" id="mynavbar">
+        <div class="container-fluid ">
+            <img src="image_files/brain-logo.png" alt="Logo" class="main-logo">
+            <a class="navbar-brand" href="">The Memory Quest</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link" aria-current="page" href="#about">Home</a>
+                    <a class="nav-link" href="#instructions">Instructions</a>
+                    <a class="nav-link" href="#features">Features</a>
+                    <a class="nav-link" href="/motivation">Today's Motivation</a>
+                    <a class="nav-link" href="/leaderboard">Leaderboard</a>
+                    <a class="nav-link" href="#faq">FAQs</a>
+                    <a class="nav-link" href="#footer">Contact us</a>
+                    <button class="nav-link" id="btn-login">Login</button>
+                    <button class="btn" id="btn-signup">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Introduction text -->
+    <div class="intro img-fluid blur">
+        <h1 class="display-1">THE MEMORY QUEST</h1>
+        <h3>Unlock Your Memory Master!!</h3>
+        <button id="play-now-btn">PLAY NOW!</button>
+    </div>
+
+    <!-- modal sign up form -->
+    <div class="overlay" onclick="closeModal()"></div>
+    <div class="form-content" id="sign-up">
+        <span id="span-signup">&times;</span>
+        <h1 class="display-1 modal-head">SIGN UP</h1>
+        <form class="form" id="signUpForm">
+            <div class="form-ele">
+                <label for="name">NAME</label>
+                <input type="text" placeholder="What's your name?" name="userName" id="signUpName">
+            </div>
+            <div class="form-ele">
+                <label for="age">AGE</label>
+                <input type="number" placeholder="How old are you?" name="userAge" id="signUpAge">
+            </div>
+            <div class="form-ele">
+                <label for="password">PASSWORD</label>
+                <input type="password" placeholder="number+special character+letters" name="password" id="signUpPassword">
+            </div>
+            <div class="form-ele">
+                <label for="password" >CONFIRM PASSWORD</label>
+                <input type="password" placeholder="Write it over."  id="signUpcpassword">
+            </div>
+            <div class="form-ele">
+                <button type="reset" class="reset-ele">RESET</button>
+            </div>
+            <div class="form-ele">
+                <button class="submit-ele" id="signUpSubmit">SUBMIT</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- modal login form -->
+    <div class="overlay2" onclick="closeModal2()"></div>
+    <div class="form-content2" id="login">
+        <span id="span-login">&times;</span>
+        <h1 class="display-1 ">LOGIN</h1>
+        <form id="loginForm" class="form">
+
+        
+            <div class="form-ele">
+                <label for="name">NAME</label>
+                <input type="text" placeholder="What's your name?" id="loginName" name="userName">
+            </div>
+            <div class="form-ele">
+                <label for="password">PASSWORD</label>
+                <input type="password" placeholder="You remember your password. right?" id="loginPassword">
+            </div>
+
+            <div class="form-ele">
+                <button type="reset" class="reset-ele ">RESET</button>
+            </div>
+            <div class="form-ele">
+                <button class="submit-ele " id="loginSubmit">SUBMIT</button>
+            </div>
+            
+        </form>
+    </div>
+
+    <!-- About us -->
+    <div class="about" id="about">
+        <img src="image_files/princess.png" class="float-start about-imgs about-flex-ele" alt="princess">
+        <p class="about-flex-ele big-para">
+            Step into the captivating world of 'The Memory Quest,' where your memory skills become your
+            greatest asset. Prepare for an exhilarating adventure that demands your focus and cognitive finesse. The
+            numbers flicker across the screen, ranging from intricate patterns to varying lengths.
+            Your task is to imprint them in your mind before they vanish within seconds. Feel the adrenaline as you face
+            the
+            challenge head-on, relying on your memory to decipher the sequence of digits amidst a dynamic and
+            fast-paced environment.
+        </p>
+        <img src="image_files/mario2-removebg-preview.png" class="float-end about-imgs about-flex-ele" alt="mario">
+    </div>
+
+    <!-- Instructions -->
+    <div class="instructions" style="overflow-x: hidden;">
+        <span class="instruct-text reveal1" id="instructions">
+            <h2>INSTRUCTIONS</h2>
+            <p class="instruct-text-ele">1. Carefully look at numbers being displayed on the screen</p>
+            <p class="instruct-text-ele">2. Recall and select the right number from the options</p>
+            <p class="instruct-text-ele">3. Complete the level, Try to maximize your score</p>
+        </span>
+        <img src="image_files/pole2.png" class="instruct-img" alt="mario on the pole">
+        <span class="instruct-text reveal2" id="features">
+            <h2>FEATURES</h2>
+            <p class="instruct-text-ele">Immersive gaming experience</p>
+            <p class="instruct-text-ele">Promises entertainment</p>
+            <p class="instruct-text-ele">Unlock the full potential of your memory</p>
+        </span>
+    </div>
+
+    <div class="faq py-4" id="faq">
+        <h2 class="text-center py-4">Frequently Asked Questions</h2>
+        <div class="accordion py-4" id="accordionPanelsStayOpenExample">
+            <div class="accordion-item my-3 reveal1">
+                <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                        aria-controls="panelsStayOpen-collapseOne">
+                        <strong> How do I sign up for an account on your website?</strong>
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+                    <div class="accordion-body">
+                        To sign up for an account, simply click on the "Sign Up" button on the homepage and fill out
+                        the registration form with your details.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item my-3 reveal1">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                        aria-controls="panelsStayOpen-collapseTwo">
+                        <strong>Is my personal information safe on your website?</strong>
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        We take your privacy and data security seriously. Our website uses industry-standard
+                        encryption protocols to protect your personal information. We do not share your data with
+                        third parties without your consent. For more details, please refer to our Privacy Policy.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item my-3 reveal1">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+                        aria-controls="panelsStayOpen-collapseThree">
+                        <strong>How should I start playing the game?</strong>
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        We hope you have signed up and then logged in. After that you can click the 'Play Now' button in
+                        the centre to start playing.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item my-3 reveal1">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false"
+                        aria-controls="panelsStayOpen-collapseFour">
+                        <strong>How are points calculated?</strong>
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        If you select the right option you gain 1 point. If not, you will earn 0 points. There are no
+                        negative points.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer id="footer">
+        <div class="social-icons">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            <a href="manascodeathon2023@cdac.in"><i class="fa fa-envelope"></i></a>
+        </div>
+        <div class="footer-nav">
+            <p><a href="#">Home</a></p>
+            <p><a href="/motivation">Motivational Quotes</a></p>
+            <p><a href="#faq">FAQs</a></p>
+            <p><a href="#">Privacy policy</a></p>
+            <p><a href="#">About developers</a></p>
+        </div>
+        <div class="footer-bottom">
+            <p>Copyright &copy; 2023</p>
+            <p>Designed with passion</p>
+        </div>
+    </footer>
+
+    <!-- Javascript source files -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script> <!--bootstrap-->
+    <script src="signup.js"></script> <!-- signup and login form-->
+</body>
+
+</html>
