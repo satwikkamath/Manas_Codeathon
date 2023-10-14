@@ -43,5 +43,3 @@ https://github.com/satwikkamath/Manas_Codeathon/assets/107809929/678fb8f5-0892-4
 4. Go to any browser and type `localhost:3000`.
 
 Challenge your memory, compete with others, and enhance your cognitive skills with The Memory Quest! 🚀🧠🥇
-
-
