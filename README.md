@@ -1,7 +1,7 @@
 # The Memory Quest: Enhancing Cognitive Skills and Mental Well-being 🧠🚀
 
 ## Overview:
-The CarePoint project was developed as part of the Manas Codeathon, where it aimed to address the critical challenges in Enhancing Cognitive Skills and Mental Well-being 🧠🚀
+The Memory Quest was developed as part of the Manas Codeathon, where it aimed to address the critical challenges in Enhancing Cognitive Skills and Mental Well-being 🧠🚀
 
 The Memory Quest is a captivating and interactive game specifically designed to boost cognitive skills and promote mental well-being. This engaging game offers a range of features to help users enhance their memory, focus, and overall mental agility. Here's a description of its key features and components:
 
